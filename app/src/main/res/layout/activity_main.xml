@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:layout_margin="10sp">
+
+    <TextView
+        android:id="@+id/myTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textColor="@color/redcolor"
+        android:textSize="20sp"
+        android:gravity="center"
+        />
+    <EditText
+        android:id="@+id/myEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myTextView"
+        android:layout_margin="10dp"
+        android:hint="@string/enter_your_text"
+        android:textColor="@color/blackcolor"
+        android:textSize="20dp"
+android:backgroundTint="@color/graycolor"
+        />
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myEditText"
+        android:layout_margin="10dp"
+        android:text="@string/my_button"
+        android:textAllCaps="false"
+        android:textSize="15dp"
+        android:background="@color/skybluecolor"
+        android:textColor="@color/bluecolor"
+
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/myButton"
+        android:orientation="vertical"
+        android:layout_margin="10sp">
+
+        <TextView
+            android:id="@+id/genderInstructionText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textColor="@color/blackcolor"
+            android:textSize="20dp"
+            />
+        <RadioGroup
+            android:id="@+id/myRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/maleRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_below="@id/genderInstructionText"
+                android:text="@string/male_Radio_button"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/blackcolor"
+
+                />
+            <RadioButton
+                android:id="@+id/femaleRadioButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/maleRadioButton"
+                android:text="@string/female_Radio_button"
+                android:textAllCaps="false"
+                android:textSize="15sp"
+                android:textColor="@color/blackcolor"
+
+                />
+        </RadioGroup>
+
+        <SeekBar
+            android:id="@+id/myseekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15sp"
+
+            />
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+</LinearLayout>
