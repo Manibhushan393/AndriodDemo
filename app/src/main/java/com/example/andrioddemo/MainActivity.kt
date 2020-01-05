@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         }
 
-
         nxtBtn.setOnClickListener {
           navigateToNext()
         }
