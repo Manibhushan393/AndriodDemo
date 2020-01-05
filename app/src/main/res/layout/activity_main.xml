@@ -96,6 +96,18 @@ android:backgroundTint="@color/graycolor"
             android:layout_marginTop="15sp"
 
             />
+        <Button
+            android:id="@+id/next_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/next_action_button"
+            android:textAllCaps="false"
+            android:textSize="15dp"
+            android:background="@color/graycolor"
+            android:textColor="@color/whitecolor"
+
+            />
     </LinearLayout>
 
 </RelativeLayout>

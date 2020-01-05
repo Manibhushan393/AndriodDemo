@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Andriod Demo</string>
+    <string name="app_name">Andriod Demo1</string>
     <string name="my_button">Button Action</string>
     <string name="enter_your_text">Enter your Text...</string>
     <string name="male_Radio_button">Male</string>
     <string name="female_Radio_button">FeMale</string>
+    <string name="next_action_button">NEXT</string>
 </resources>
