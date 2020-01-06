@@ -11,6 +11,9 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -21,7 +24,8 @@ class MainActivity : AppCompatActivity() {
         val myEditText = findViewById<TextView>(R.id.myEditText)
         val maleRadioBtn = findViewById<RadioButton>(R.id.maleRadioButton)
 
-
+        // Configure UIElements
+       // configureclickEvents()
         myBtn.setOnClickListener {
 
             Toast.makeText(this,"Button is Clicked",Toast.LENGTH_LONG).show()
@@ -30,8 +34,11 @@ class MainActivity : AppCompatActivity() {
         }
 
         nxtBtn.setOnClickListener {
-          navigateToNext()
+            navigateToNext()
         }
+    }
+
+    fun configureclickEvents() {
 
     }
 
