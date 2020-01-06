@@ -8,6 +8,9 @@ import android.widget.RadioButton
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
 
@@ -35,6 +38,13 @@ class MainActivity : AppCompatActivity() {
 
         nxtBtn.setOnClickListener {
             navigateToNext()
+        }
+
+        val repository = MoviesRepository(MoviesApi())
+
+        GlobalScope.launch(Dispatchers.Main){
+            val movies = repository.getMovies()
+            //myText.text = movies.toString()
         }
     }
 
