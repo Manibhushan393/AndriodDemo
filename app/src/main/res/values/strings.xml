@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Andriod Demo1</string>
+    <string name="app_name">MVVM Andriod Demo</string>
     <string name="my_button">Button Action</string>
     <string name="enter_your_text">Enter your Text...</string>
     <string name="male_Radio_button">Male</string>
