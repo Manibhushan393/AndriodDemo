@@ -40,12 +40,6 @@ class MainActivity : AppCompatActivity() {
             navigateToNext()
         }
 
-        val repository = MoviesRepository(MoviesApi())
-
-        GlobalScope.launch(Dispatchers.Main){
-            val movies = repository.getMovies()
-            //myText.text = movies.toString()
-        }
     }
 
     fun configureclickEvents() {
