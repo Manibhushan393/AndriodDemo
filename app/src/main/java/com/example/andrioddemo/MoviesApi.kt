@@ -8,7 +8,7 @@ import retrofit2.http.GET
 interface MoviesApi {
 
     @GET("movies")
-    fun getMovies() : Response<List<Movie>>
+    suspend fun getMovies() : Response<List<Movie>>
 
     companion object {
         operator  fun invoke() : MoviesApi {

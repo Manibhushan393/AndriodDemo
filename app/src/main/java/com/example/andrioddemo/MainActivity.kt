@@ -42,10 +42,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun configureclickEvents() {
-
-    }
-
     fun navigateToNext()
     {
         val intent = Intent(this@MainActivity,ListingActivity::class.java)

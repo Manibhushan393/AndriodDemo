@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
     <data>
@@ -25,18 +26,90 @@
                 android:layout_height="200dp">
                 <ImageView
                     android:id="@+id/imageView"
+                    app:image="@{movie.image}"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:backgroundTint="@color/bluecolor"
-                    android:layout_margin="5dp"/>
+                    android:scaleType="matrix"
+                    />
+                <TextView
+                    android:id="@+id/textViewIsNew"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New"
+                    android:background="#1C9603"
+                    android:textSize="12sp"
+                    android:width="40dp"
+                    android:textColor="@color/whitecolor"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:padding="2dp"
+                    />
+                <TextView
+                    android:id="@+id/textViewRating"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:text="UA"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:background="@drawable/textview_round_border_background"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/whitecolor"
+                    android:padding="4dp"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/layout_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="3dp"
+                    android:paddingBottom="3dp"
+                    android:paddingRight="12dp"
+                    android:paddingLeft="12dp"
+                    android:layout_margin="15dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/relativelayout_background"
+
+                    >
+
+                    <ImageView
+                        android:id="@+id/likedImageView"
+                        android:layout_width="15dp"
+                        android:layout_height="14dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/ic_like" />
+                    <TextView
+                        android:layout_toRightOf="@+id/likedImageView"
+                        android:id="@+id/likedImageViewPercent"
+                        android:textSize="17dp"
+                        android:textStyle="bold"
+                        android:text="78%"
+                        android:textColor="@color/whitecolor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textViewVotes"
+                        android:layout_below="@+id/likedImageViewPercent"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="@color/whitecolor"
+                        android:text="2023 votes"
+                        />
+                </RelativeLayout>
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/layout_like"
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent"
                 android:padding="5dp"
-                android:background="@color/bluecolor">
+                android:background="@color/whitecolor">
 
                     <TextView
                         android:id="@+id/title"
@@ -45,7 +118,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textSize="18dp"
-                        android:textColor="@color/whitecolor"/>
+                        android:textColor="@color/blackcolor"/>
 
                     <TextView
                         android:id="@+id/sub_title"
@@ -54,9 +127,10 @@
                         android:layout_below="@id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/whitecolor"/>
+                        android:textColor="@color/graycolor"/>
 
                 <Button
+                    android:id="@+id/buttonBook"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
